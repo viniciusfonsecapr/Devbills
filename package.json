@@ -1,17 +1,23 @@
 {
   "name": "devbills",
   "version": "1.0.0",
-  "description": "Devbills-API",
+  "description": "Devbills-API - Controle sua Vida Financeira",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch ./src/server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Vinicius Fonseca",
+    "email": "viniciusfonsecapr@gmail.com", 
+    "url": "https://www.linkedin.com/in/viniciusfonsecapr/"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.21",
     "eslint": "^9.2.0",
+    "tsx": "^4.9.3",
     "typescript": "^5.4.5"
   },
   "dependencies": {
