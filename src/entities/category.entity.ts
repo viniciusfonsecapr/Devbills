@@ -12,7 +12,7 @@ export class Category {
   constructor({ id, color, title }: CategoryProps) {
     this.id = id;
     this.title = title;
-    this.color = color;
+    this.color = color.toLocaleUpperCase();
   }
 }
 
