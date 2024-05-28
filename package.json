@@ -28,7 +28,8 @@
     "express": "^4.19.2",
     "http-status-codes": "^2.3.0",
     "mongoose": "^8.4.0",
-    "yarn": "^1.22.22"
+    "yarn": "^1.22.22",
+    "zod": "^3.23.8"
   },
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.20.2"
