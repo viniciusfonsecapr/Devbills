@@ -3,7 +3,6 @@ import { CategoriesServices } from "../services/categories.services";
 import { CategoriesRepository } from "../database/repositories/categories.repository";
 import { CategoryModel } from "../database/schemas/category.schema";
 import { CreateCategoryDTO } from "../dtos/categories.dto";
-import { z } from "zod";
 import { StatusCodes } from "http-status-codes";
 
 export class CategoriesController {
