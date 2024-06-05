@@ -2,10 +2,13 @@ import { Router } from "express";
 import { createCategorySchema } from "../dtos/categories.dto";
 import { CategoriesController } from "../controllers/categories.controller";
 import { ParamsType, validator } from "../middleware/validator.middleware";
+import { CategoriesFactory } from "../factories/categories.factory";
 
 export const categoriesRoutes = Router();
 
-const controller = new CategoriesController();
+const controller = new CategoriesController(
+  CategoriesFactory.getServiceInstance()
+);
 
 categoriesRoutes.get("/", controller.index);
 
