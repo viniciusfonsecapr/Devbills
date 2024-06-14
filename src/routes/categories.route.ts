@@ -20,3 +20,12 @@ categoriesRoutes.post(
   }),
   controller.create
 );
+
+categoriesRoutes.post(
+  "/",
+  validator({
+    schema: createCategorySchema,
+    type: ParamsType.BODY,
+  }),
+  controller.create
+);

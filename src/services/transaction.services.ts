@@ -1,6 +1,9 @@
 import { TransactionsRepository } from "../database/repositories/transactions.repository";
 import { Transaction } from "../entities/transaction.entity";
-import { CreateTransactionDTO } from "../dtos/transactions.dto";
+import {
+  CreateTransactionDTO,
+  IndexTransactionDTO,
+} from "../dtos/transactions.dto";
 import { CategoriesRepository } from "../database/repositories/categories.repository";
 import { AppError } from "../errors/app.error";
 import { StatusCodes } from "http-status-codes";
@@ -37,5 +40,11 @@ export class TransactionsService {
     );
 
     return createdTransaction;
+  }
+
+  async index(filters: IndexTransactionDTO): Promise<Transaction[]> {
+    const transactions = await this.transactionsRepository.index(filters);
+
+    return transactions;
   }
 }
