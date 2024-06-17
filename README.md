@@ -9,19 +9,19 @@
 <h1 align="center">Devbills</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{viniciusfonsecapr}}/devbills?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{viniciusfonsecapr}}/devbills?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{viniciusfonsecapr}}/devbills?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/{{viniciusfonsecapr}}/devbills?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{viniciusfonsecapr}}/devbills?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{}}/devbills?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/devbills?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{}}/devbills?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -47,7 +47,6 @@
 ## :dart: About
 
 ![typescript-devbills](https://github.com/viniciusfonsecapr/Devbills/assets/87347314/dc578518-ec7d-49b2-bba4-3c7ad3505555)
-
 
 ## :sparkles: Features
 
