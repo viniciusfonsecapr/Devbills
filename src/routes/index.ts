@@ -7,4 +7,4 @@ export const routes = Router();
 
 routes.use("/", baseRoutes);
 routes.use("/categories", categoriesRoutes);
-routes.use("/transations", transactionRoutes);
+routes.use("/transactions", transactionRoutes);

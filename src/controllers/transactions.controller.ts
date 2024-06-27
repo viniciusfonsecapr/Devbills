@@ -3,6 +3,7 @@ import { StatusCodes } from "http-status-codes";
 import { TransactionsService } from "../services/transaction.services";
 import {
   CreateTransactionDTO,
+  GetDashboardDTO,
   IndexTransactionDTO,
 } from "../dtos/transactions.dto";
 
@@ -44,6 +45,25 @@ export class TransactionsController {
         beginDate,
         endDate,
         categoryId,
+      });
+
+      return res.status(StatusCodes.OK).json(result);
+    } catch (err) {
+      next(err);
+    }
+  };
+
+  getDashboard = async (
+    req: Request<unknown, unknown, unknown, GetDashboardDTO>,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const { beginDate, endDate } = req.query;
+
+      const result = await this.transactionsService.getDashboard({
+        beginDate,
+        endDate,
       });
 
       return res.status(StatusCodes.OK).json(result);
