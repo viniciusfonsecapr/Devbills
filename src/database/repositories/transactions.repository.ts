@@ -1,4 +1,7 @@
-import { Transaction } from "../../entities/transaction.entity";
+import {
+  Transaction,
+  TransactionType,
+} from "../../entities/transaction.entity";
 import { TransactionModel } from "../schemas/transaction.schema";
 import {
   CreateTransactionDTO,
@@ -6,6 +9,7 @@ import {
   GetDashboardDTO,
 } from "../../dtos/transactions.dto";
 import { Balance } from "../../entities/balance.entity";
+import { Expense } from "../../entities/expense.entity";
 
 export class TransactionsRepository {
   constructor(private model: typeof TransactionModel) {}
@@ -111,6 +115,38 @@ export class TransactionsRepository {
         },
       });
 
+    return result;
+  }
+
+  async getExpenses({
+    beginDate,
+    endDate,
+  }: GetDashboardDTO): Promise<Expense[]> {
+    const aggregate = this.model.aggregate<Expense>();
+
+    const matchParams: Record<string, unknown> = {
+      type: TransactionType.EXPENSE,
+    };
+
+    if (beginDate || endDate) {
+      matchParams.date = {
+        ...(beginDate && { $gte: beginDate }),
+        ...(endDate && { $lte: endDate }),
+      };
+    }
+
+    const result = await aggregate.match(matchParams).group({
+      _id: "$category._id",
+      title: {
+        $first: "$category.title",
+      },
+      color: {
+        $first: "$category.color",
+      },
+      amount: {
+        $sum: "$amount",
+      },
+    });
     return result;
   }
 }
