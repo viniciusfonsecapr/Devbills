@@ -3,6 +3,7 @@ import { Transaction } from "../entities/transaction.entity";
 import {
   CreateTransactionDTO,
   GetDashboardDTO,
+  GetFinancialEvolutionDTO,
   IndexTransactionDTO,
 } from "../dtos/transactions.dto";
 import { CategoriesRepository } from "../database/repositories/categories.repository";
@@ -75,5 +76,13 @@ export class TransactionsService {
       });
     }
     return { balance, expenses };
+  }
+
+  async getFinancialEvolution({
+    year,
+  }: GetFinancialEvolutionDTO): Promise<Balance[]> {
+    const financialEvolution = await this.getFinancialEvolution({ year });
+
+    return financialEvolution;
   }
 }

@@ -4,6 +4,7 @@ import { ParamsType, validator } from "../middleware/validator.middleware";
 import {
   createTransactionSchema,
   getDashboardSchema,
+  getFinancialEvolutionSchema,
   indexTransactionSchema,
 } from "../dtos/transactions.dto";
 import { TransactionsController } from "../controllers/transactions.controller";
@@ -40,4 +41,13 @@ transactionRoutes.get(
     type: ParamsType.QUERY,
   }),
   controller.getDashboard
+);
+
+transactionRoutes.get(
+  "/financial-evolution",
+  validator({
+    schema: getFinancialEvolutionSchema,
+    type: ParamsType.QUERY,
+  }),
+  controller.getFinancialEvolution
 );
