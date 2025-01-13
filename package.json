@@ -20,10 +20,11 @@
     "@types/node": "^20.12.12",
     "esbuild": "0.21.5",
     "eslint": "^9.2.0",
-    "tsx": "^4.9.3",
+    "tsx": "4.6.1",
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "common": "^0.2.5",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "esbuild-wasm": "^0.21.3",
